@@ -1,0 +1,69 @@
+<Review the Program Specification>
+
+    Refer to the Journal program specification. As a team, review the program requirements and how it is supposed to work.
+
+    1. What does the program do?
+        It's a journal application that allows users to record their daily entries by providing prompts and saving their responses along with the data.
+    2. What user inputs does it have?
+        For choosing options from a menu
+        Journal record
+    3. What output does it produce?
+        Writing a new entry prompts
+        Displaying the journal outputs
+        Saving the jornal to a file prompts
+        Loading the jornal froma file prompts
+    4. How does the program end?
+        Choose the Exit option the end the program
+
+<Determine the classes>
+The first step in designing a program like this is to think about the classes you will need. When thinking about classes, it is often helpful to consider the strong nouns in the program description.
+    1. What are good candidates for classes in this program?
+    2. What are the primary responsibilities of each class?
+        Jornal:
+            Store a list of jornal entries
+            Provides methods for adding, displaying, saving, and loading entries
+            Manages interactions with the jornal entries
+        Entry:
+            Represents a single jornal entry
+            Stores information such as prompt, response, and date
+        PromptGenerator:
+            Supplis random prompts whenever needed
+        Program:
+            Start and handle the program
+
+<Define class behaviors>
+Now that you have decided on the classes you will need and their responsibilities, the next step is to define the behaviors of these classes. These will become the methods of each class.
+
+    1. What are the behaviors this class will have in order to fulfill its responsibilities? (In other words, what things should this class do?)
+
+        Journal:
+            Variables/Attributes:
+                _entries: List<Entry>
+            
+            Methods:
+                AddEntry(newEntry : Entry) : void
+                    Adds a new jornal entry with the provided prompt, reponse, and date to the jornal
+                DisplayAll(): void
+                    Displays all journal entries stored in the jornal
+                SaveToFile(file: string)
+                    Saves the jornal entries to a file with the given filename
+                LoadFromFile(file : string)
+                    Loads jornal entries from a file with the given filename, replacing any existing entries in the jornal
+        Entry:
+            Variables/Attributes:
+                _date: string
+                _promptText: string
+                _entryText: string
+
+            Methods:
+                Display(): void
+
+        PromptGenerator:
+            Variables/Attributes:
+                _prompts: List<string>
+                
+            Methods:
+                GetRandomPrompt() : string
+                    Generates and returns a random prompt for a jornal entry
+    
+    
