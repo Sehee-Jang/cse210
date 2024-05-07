@@ -1,0 +1,79 @@
+Encapsulation - Articulate
+[Overview]
+    Articulate the principle of encapsulation.
+
+[Instructions]
+    Now that you have learned about the principle of encapsulation, and designed and developed a program using it, return to Canvas and answer the following question (the way you would in a job interview):
+
+What is encapsulation and why is it important?
+
+Your response must:
+
+    Explain the meaning of Encapsulation
+
+        Encapsulation is the implementation of relevant data and methods dealing with it within a single object. In this way, access to internal data is hidden or controlled so that it cannot be accessed from outside the object. 
+
+        관련성이 있는 데이터와 이 데이터를 다루는 메서드를 하나의 객체 안에 구현하는 것
+        이러한 방식으로 객체 외부에서 접근하지 못하도록 내부 데이터에 대한 액세스를 숨기거나 제어하는 것
+        
+
+    Highlight a benefit of Encapsulation
+        The advantage of encapsulation is that it helps to increase maintenance and reduce errors. If access to the data is required, instead of setting the variable to public, a get/set method should be created and used, which increases stability by maintaining the state of the object consistently and preventing unauthorized access from outside.
+
+        유지보수성을 높이고 오류를 줄이는데 도움이 된다.
+        해당 데이터에 대한 접근을 해야할 경우 변수를 public으로 설정하는 대신 get/set 메서드를 만들어 사용해야 하는데, 이러한 방식은 객체의 상태를 일관되게 유지하고 외부에서의 무단 접근을 방지함으로써 안정성을 높인다.
+        
+    Provide an application of Encapsulation
+        The application of encapsulation is easy to see in banking systems that handle customer information. Only methods such as deposit, withdrawal, and balance can know the details of the account, and sensitive financial data is guaranteed confidentiality.
+
+        캡슐화의 적용은 고객의 정보를 다루는 은행 시스템에서 쉽게 볼 수 있다.
+        입금, 출금, 잔액 등의 메서드만 계좌의 세부정보를 알 수 있으며 민감한 금융 데이터는 기밀성이 보장된다.
+        
+    Use a code example of Encapsulation from the program you wrote
+        public class Person
+        {
+            private int _age;       // Private field to store age
+            private string _name;   // Private field to store name
+
+            public int GetAge()     // Method to get age
+            {
+                return _age;
+            }
+            public void SetAge(int age) // Method to set age
+            {
+                _age = age;
+            }
+            public string GetName() // Method to get name
+            {
+                return _name;
+            }
+            public void SetName(string name)    // Method to set name
+            {
+                _name = name;
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            // Creating an instance of Person class
+            Person p = new Person();
+
+            // Setting age and name using respective setter methods
+            p.SetAge(30);
+            p.SetName("John");          
+            
+            // Getting and printing the name and age using getter methods
+            Console.WriteLine(p.GetName());   
+            Console.WriteLine(p.GetAge());  
+        }
+
+
+
+    Thoroughly explain these concepts (this likely cannot be done in less than 100 words)
+
+
+Encapsulation is the implementation of relevant data and methods dealing with it within a single object. In this way, access to internal data is hidden or controlled so that it cannot be accessed from outside the object. 
+
+The advantage of encapsulation is that it helps to increase maintenance and reduce errors. If access to the data is required, instead of setting the variable to public, a get/set method should be created and used, which increases stability by maintaining the state of the object consistently and preventing unauthorized access from outside.
+
+The application of encapsulation is easy to see in banking systems that handle customer information. Only methods such as deposit, withdrawal, and balance can know the details of the account, and sensitive financial data is guaranteed confidentiality.
