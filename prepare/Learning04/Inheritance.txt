@@ -1,0 +1,95 @@
+Inheritance - Articulate
+[Overview]
+    Articulate the principle of inheritance.
+
+[Instructions]
+    Now that you have learned about the principle of inheritance, and designed and developed a program using it, return to Canvas and answer the following question (the way you would in a job interview):
+
+What is inheritance and why is it important?
+Your response must:
+
+    Explain the meaning of Inheritance
+        Inheritance refers to the ability to use its attributes and methods as they are for other classes. The class that being inherited from is called the parent class(or base or super), and the class that inherits from another class is called the child class(or derived or sub).
+        클래스의 기본 속성을 다른 클래스가 그대로 이어받아 사용할 수 있는 것을 의미한다.
+        상속을 하는 클래스를 부모클래스, 상속을 받는 클래스를 자식 클래스라고 한다.
+    Highlight a benefit of Inheritance
+        The benefits of inheritance are code reusability and maintenance.
+        By inheriting from a parent class, subclasses can avoid duplicating code for common attributes or behaviors. This reduces redundancy, enhances code readability, and simplifies maintenance since changes made in the parent class automatically reflect in all its subclasses.
+        중복되는 코드를 제거하고 재사용할 수 있다.
+        부모클래스의 특성으로 그대로 자식클래스가 받아 기능적으로 확장이 가능하다.
+        공통적으로 사용되는 코드를 부모클래스에 담아 여러 업무에서 사용될 자식클래스를 확장하면 유지보수와 코드관리가 편해진다.
+    Provide an application of Inheritance
+        It can be used in school systems. Student and employee classes inherit common attributes(name, birth date, address, phone number) from school class. This inheritance allows for the reuse of these attributes across different entities in the school system, while still enabling customization through additional attributes such as student ID number and employee ID number.
+
+        School
+            name
+            birthDate
+            address
+            phoneNumber
+
+        Student: School
+            name
+            birthDate
+            address
+            phoneNumber
+            studentIDNum
+
+        Employee: School
+            name
+            birthDate
+            address
+            phoneNumber
+            employeeIDNum
+
+    Use a code example of Inheritance from the program you wrote
+    class School
+    {
+        public string _name;
+        public DateTime _birthDate;
+        public string _address;
+        public string _phoneNum;
+
+        public School(string name, DateTime birthDate, string address, string phoneNumber)
+        {
+        _name = name;
+        _birthDate = birthDate;
+        _address = address;
+        _phoneNum = phoneNumber;
+        }
+    }
+
+    // Derived class 1
+    class Student : School
+    {
+        public int _studentIDNum;
+
+        public Student(string name, DateTime birthDate, string address, string phoneNumber, int studentIDNum)
+        : base(name, birthDate, address, phoneNumber)
+        {
+            _studentIDNum = studentIDNum;
+        }
+    }
+
+    // Derived class 2
+    class Employee : School
+    {
+        public int _employeeIDNum;
+
+        public Employee(string name, DateTime birthDate, string address, string phoneNumber, int employeeIDNum)
+        : base(name, birthDate, address, phoneNumber)
+        {
+            _employeeIDNum = employeeIDNum;
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Student student = new Student("Sehee Jang", new DateTime(2000, 5, 10), "1234 Main St", "801-123-4567", 12345);
+            Employee employee = new Employee("Jane Smith", new DateTime(1985, 10, 15), "567 Main Ave", "801-987-6543", 09653);
+
+            Console.WriteLine($"Student: {student._name}, ID: {student._studentIDNum}");
+            Console.WriteLine($"Employee: {employee._name}, ID: {employee._employeeIDNum}");
+        }
+    }
