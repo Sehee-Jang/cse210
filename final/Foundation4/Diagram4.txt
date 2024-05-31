@@ -1,0 +1,35 @@
+Program 4: Polymorphism with Exercise Tracking
+
+Classes and responsibility
+    Activity
+        _date: string
+        _length: int
+
+        GetDistance(): float
+        GetSpeed(): float
+        GetPace(): float
+        GetSummary(): string
+    
+    Running: Activity
+        _distance: float
+
+        GetDistance(): float
+        GetSpeed(): float
+        GetPace(): float
+        GetSummary(): string
+
+    Cycling: Activity
+        _speed: float
+
+        GetDistance(): float
+        GetSpeed(): float
+        GetPace(): float
+        GetSummary(): string
+
+    Swimming: Activity
+        _laps: int
+
+        GetDistance(): float
+        GetSpeed(): float
+        GetPace(): float
+        GetSummary(): string

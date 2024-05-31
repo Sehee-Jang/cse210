@@ -1,0 +1,38 @@
+Program 3: Inheritance with Event Planning
+
+Classes and responsibility
+    Event
+        _title: string
+        _description: string
+        _date: string
+        _time: string
+        _address: string
+
+        getStandardDetails(): string
+        getFullDetails(): string
+        getShortDescription(): string
+
+    Lecture: Event
+        _speaker: string
+        _capacity: int
+
+        getFullDetails(): string
+
+    Reception: Event
+        _rsvpEmail: string
+
+        getFullDetails(): string
+
+    Outdoor: Event
+        _weatherForecast: string
+
+        getFullDetails(): string
+
+    Address
+        _street: string
+        _city: string
+        _state: string
+        _country: string
+        _zipcode: string
+
+        toString(): string

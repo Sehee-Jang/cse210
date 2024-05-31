@@ -1,0 +1,40 @@
+Program 2: Encapsulation with Online Ordering
+
+Classes and responsibility
+    - Order
+        _products: List<Product>
+        _customer: Customer
+
+        AddProduct(Product product): void
+        TotalPrice(): decimal
+        GetPackingLabel(): string
+        GetShippingLabel(): string
+
+    - Products
+        _name: string
+        _productId: string
+        _price: decimal
+        _quantity: int
+
+        GetName(): string
+        GetProductId(): string
+        GetPrice(): decimal
+        GetQuantity(): int
+        TotalPrice(): decimal
+
+    - Customer
+        _name: string
+        _address: Address
+
+        GetName(): string
+        GetAddress(): Address
+        ISInUSA(): bool
+
+    - Address
+        _street: string
+        _city: string
+        _state: string
+        _country: string
+
+        ISInUSA(): bool
+        FullAddress(): string
