@@ -18,6 +18,11 @@ public class Product
         return _name;
     }
 
+    public void SetName(string name)
+    {
+        _name = name;
+    }
+
     public string GetProductId()
     {
         return _productId;
@@ -36,5 +41,11 @@ public class Product
     public decimal TotalPrice()
     {
         return _price * _quantity;
+    }
+
+    public string GetPackingLabel()
+    {
+        return $"{_name} (Product ID: {_productId}) (Quantity: {_quantity}) ";
+        // packingLabel += $"{i + 1}. {_products[i].GetName()} ".PadRight(30) + $"ID: {_products[i].GetProductId()}\n";
     }
 }

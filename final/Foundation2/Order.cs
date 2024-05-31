@@ -40,8 +40,9 @@ public class Order
         string packingLabel = "PACKING DETAIL\n";
         for (int i = 0; i < _products.Count; i++)
         {
-            packingLabel += $"{i + 1}. {_products[i].GetName()} ".PadRight(30) + $"ID: {_products[i].GetProductId()}\n";
+            packingLabel += $"{i + 1}. {_products[i].GetName()}\n" + $"ID: {_products[i].GetProductId()}".PadRight(20) + $"Price: ${_products[i].GetPrice()}".PadRight(20) + $"Qty: {_products[i].GetQuantity()}\n";
         }
+
         return packingLabel;
     }
 

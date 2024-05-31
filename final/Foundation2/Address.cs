@@ -15,25 +15,25 @@ public class Address
         _country = country;
     }
 
-    public string GetStreetAddress()
-    {
-        return _street;
-    }
+    // public string GetStreetAddress()
+    // {
+    //     return _street;
+    // }
 
-    public string GetCityAddress()
-    {
-        return _city;
-    }
+    // public string GetCityAddress()
+    // {
+    //     return _city;
+    // }
 
-    public string GetStateAddress()
-    {
-        return _state;
-    }
+    // public string GetStateAddress()
+    // {
+    //     return _state;
+    // }
 
-    public string GetCountryAddress()
-    {
-        return _country;
-    }
+    // public string GetCountryAddress()
+    // {
+    //     return _country;
+    // }
 
     public bool ISInUSA()
     {
