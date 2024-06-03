@@ -1,0 +1,29 @@
+Programming with Classes - Articulate
+
+Overview
+    Articulate the principles of programming with classes.
+
+Instructions
+    You have now learned about each of four principles of Programming with Classes:
+
+    Abstraction
+    Encapsulation
+    Inheritance
+    Polymorphism
+
+You have also used these principles to design and develop your final project. This final project is the Foundation 4 project and includes all four of those programs, so you can refer to any of the code you used in those programs.
+
+As a final Articulate assignment, return to Canvas and answer the following questions (the way you would in a job interview):
+    - Briefly define each of the 4 principles of Programming with Classes.
+    - For each principle: Describe how each principle was used in your final project.
+    - Overall: How did using these principles help your final project become more flexible for future changes? (Provide specific examples.)
+
+Your response must:
+    Explain the meaning of each principle.
+    Highlight how each principle was used in your final project.
+    Explain how these principles make your final project more flexible for changes.
+    Thoroughly explain these concepts (this likely cannot be done in less than 100 words)
+
+Abstraction
+1. Abstraction means only essential features of an object are remained while hiding the unnecessary details.
+2. Use in project: 
