@@ -15,19 +15,19 @@ public class Event
         _address = address;
     }
     // List the title, description, date, time, and address
-    public virtual string getStandardDetails()
+    public virtual string GetStandardDetails()
     {
-        return $"Title: {_title}\nDescription: {_description}\nDate: {_date}\nTime: {_time}\nAddress: {_address}";
+        return $"Title: {_title}\nDescription: {_description}\nDate: {_date}\nTime: {_time}\nAddress: {_address.GetAddressDetails()}";
     }
 
     // List all of the above, plus type of event and information specific to that event type
-    public virtual string getFullDetails()
+    public virtual string GetFullDetails()
     {
-        return getStandardDetails();
+        return GetStandardDetails();
     }
 
     // List the type of event, title, and the date    public abstract string getShortDescription()
-    public virtual string getShortDescription()
+    public virtual string GetShortDescription()
     {
         return $"Type: Event\nTitle: {_title}\nDate: {_date}";
     }

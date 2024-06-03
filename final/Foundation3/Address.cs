@@ -2,20 +2,20 @@ public class Address
 {
     private string _street;
     private string _city;
-    private string _country;
+    private string _state;
     private string _zipcode;
 
-    public Address(string street, string city, string country, string zipcode)
+    public Address(string street, string city, string state, string zipcode)
     {
         _street = street;
         _city = city;
-        _country = country;
+        _state = state;
         _zipcode = zipcode;
     }
 
-    public string toString()
+    public string GetAddressDetails()
     {
-        return "${_street}, {_city}, {_state}, {_zipcode}";
+        return $"{_street}, {_city}, {_state}, {_zipcode}";
     }
 
 }

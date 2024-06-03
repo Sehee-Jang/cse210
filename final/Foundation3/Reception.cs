@@ -8,12 +8,12 @@ public class Reception : Event
         _rsvpEmail = rsvpEmail;
     }
 
-    public override string getFullDetails()
+    public override string GetFullDetails()
     {
-        return $"{base.getStandardDetails()}\nType: Reciption\nRSVP Email: {_rsvpEmail}";
+        return $"{base.GetStandardDetails()}\nType: Reciption\nRSVP Email: {_rsvpEmail}";
     }
 
-    public override string getShortDescription()
+    public override string GetShortDescription()
     {
         return $"Type: Reception\nTitle: {_title}\nDate: {_date}";
     }

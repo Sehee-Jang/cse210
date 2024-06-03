@@ -7,12 +7,12 @@ public class Outdoor : Event
         _weatherForecast = weatherForecast;
     }
 
-    public override string getFullDetails()
+    public override string GetFullDetails()
     {
-        return $"{base.getStandardDetails()}\nType: Outdoor\nWeather Forecast: {_weatherForecast}";
+        return $"{base.GetStandardDetails()}\nType: Outdoor\nWeather Forecast: {_weatherForecast}";
     }
 
-    public override string getShortDescription()
+    public override string GetShortDescription()
     {
         return $"Type: Outdoor\nTitle: {_title}\nDate: {_date}";
     }
