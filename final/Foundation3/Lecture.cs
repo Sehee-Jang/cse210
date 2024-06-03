@@ -1,24 +1,21 @@
-class Lecture : Event
+public class Lecture : Event
 {
     private string _speaker;
     private int _capacity;
 
-    public Lecture(string title, string description, string date, string time, string address) : base(title, description, date, time, address)
+    public Lecture(string title, string description, string date, string time, Address address, string speaker, int capacity) : base(title, description, date, time, address)
     {
-
+        _speaker = speaker;
+        _capacity = capacity;
     }
 
-    public override string getStandardDetails()
-    {
-        return "{_title}, {_description}, {_date}, {_time}, {_address}";
-    }
     public override string getFullDetails()
     {
-        return getStandardDetails() + "${_speaker} + {_capacity}";
+        return $"{base.getStandardDetails()}\nType: Lecture\nSpeaker: ${_speaker}\nCapacity: {_capacity}";
     }
 
     public override string getShortDescription()
     {
-        return "${_speaker} + {_capacity} + {_title} + {date}";
+        return $"Type: Lecture\n Title: {_title}\nDate: {_date}";
     }
 }
