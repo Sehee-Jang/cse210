@@ -26,4 +26,31 @@ Your response must:
 
 Abstraction
 1. Abstraction means only essential features of an object are remained while hiding the unnecessary details.
-2. Use in project: 
+2. Use in project: Abstraction was used in Video and Comment classes in the project 1. User don't need to know how the videos and comments are stored or managed, but they just interact with the classes through the methods such as Addcomment or DisplayVideoDetails.
+3. Flexibility: Abstraction allows us make changes to the project without affecting other parts of the code. For example, if you want to change how comments are stored, you only need to modify the Video class without changing any code that adds or display comments. And, the rest of the code stays the same.
+
+Encapsulation
+1. Encapsulation means putting together important stuff, like information and how to deal with it, into one little package called an object.
+2. Use in project: Encapsulation was used in Customer class in the project 2. The both _name and _address fields are private which means they are preventing direct access from outside the class, but they only provides access through getter methods.
+3. Flexibility: It helps us to protect our data from outside changes but makes it easider to maintain the project. If you want to change the names or addresses, you can do it inside the Customer class. Also, you can add new features or make improvements within the system without affecting the rest of the application, simplifying maintenance and updates.
+
+Inheritance
+1. Inheritance means it allows a class to inherit properties and methods from another class. 
+2. Use in project: In the program 3, the Event class is a parent class and Lecture, Outdoor, and Reception classes are child classes. Each child classes has the common properties and methods that are already defined in the parent class and extends its functionality by adding specific attributes and behaviors.
+3. Flexibility: It makes it easy to add more new event types in the future. Because the parent class already have existing codebase, you can simply create a new class inherits from the Event class and implement the specific attributes and methods.
+
+Polymorphism
+1. Polymorphism refers to the ability of multiple classes derived from the same interface or parent class to implement the same method differently.
+2. Use in project: Polymorphism allows for more dynamic and flexible behavior, making it easier to accommodate new requirements or features without extensively modifying existing code.
+3. Flexibility: In the future, it's easy to add new activities with polymorphism because you can inherits the new activity class from Activity(parent class) and implements the required methods. Also, Ii makes easy to handle all activity classes uniformly despite their different implementations. You don't need to know the specific details of each class to print a summary of each activity such as this loop:
+List<Activity> activities = new List<Activity>
+        {
+            new Running("01 Jun 2024", 60, 10.0f),
+            new Cycling("11 Nov 2023", 120, 12.0f),
+            new Swimming("02 Jan 2024", 40, 20)
+        };
+
+        foreach (var activity in activities)
+        {
+            Console.WriteLine(activity.GetSummary());
+        }

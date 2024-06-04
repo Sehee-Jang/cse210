@@ -11,6 +11,9 @@ Your response must:
     Explain the meaning of Polymorphism
         Polymorphism is a core concept in object-oriented programming that allows objects from different class to be treated as objects of a common superclass.
         Polymorphism is that child classes that inherit from another class can take on many forms.
+        다형성은 동일한 인터페이스 또는 부모 클래스에서 파생된 여러 클래스들이 동일한 메서드를 각기 다르게 구현할 수 있는 능력을 의미한다.
+        다형성이란 공통된 부분은 부모 클래스에 구현하고, 이를 모든 자식 클래스에서 상속하도록 한 뒤에 각각의 자식 클래스는 각자 필요한 기능만 구현하도록 만드는 것이다.
+        
     Highlight a benefit of Polymorphism
         Code Independence: It allows for methods to be written that can operate on objects of different types, making the code more modular and easier to extend.
         Storing multiple types in a single list: you can store different object types in the same list or collection. For example, a list can hold both Dog and Cat classes objects if it inherits from a common superclass Animal.
